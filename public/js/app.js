@@ -5,6 +5,7 @@
   require('angular-cookies'),
   require('angular-materialize'),
   'app.config',
+  'app.home',
   'app.about',
   'app.contact'
 ]))

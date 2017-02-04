@@ -1,3 +1,3 @@
 ((app)=>{
   'use strict'
-})(require('angular').module('about', []))
+})(require('angular').module('app.about',[]))
