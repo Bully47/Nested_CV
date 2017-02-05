@@ -1,8 +1,9 @@
 ((app)=>{
     'use strict'
-    app.component('contactEmail',{
+    app.component('contactemail',{
       templateUrl:'js/components/contact/email/contactEmail.html',
       controller:[ function(){
+        
 
       }]
     })

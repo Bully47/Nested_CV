@@ -7,35 +7,25 @@
     $locationProvider.hashPrefix('!');
     $urlRouterProvider.otherwise('/');
     $stateProvider.state('home', {
-				          url: '/',
-				          component: 'home'
+				        url: '/',
+                templateUrl: `js/components/common/common.html`
 			       })
              .state('about', {
             	  url: '/about',
-                component: 'about'
+                template: '<about></about>'
              })
              .state('contact', {
-                redirectTo: 'contact.phone',
+                redirectTo: 'contact',
                 url: '/contact',
-                component: 'contact'
+                template: '<contact></contact>'
              })
              .state('contact.email', {
                url: '/email',
-               component: 'contactEmail'
+               template: '<contact-email></contact-email>'
              })
              .state('contact.phone', {
-                 url: '^/phone',
-                component: 'contactPhone'
+                url: '^/phone',
+                template:'<contact-phone></contact-phone>'
              })
-
-
-
-
-
-
-
-
-
-
-        }])
+          }])
 })(require('angular').module('app.config', []))

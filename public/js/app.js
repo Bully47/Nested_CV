@@ -6,6 +6,7 @@
   require('angular-materialize'),
   'app.config',
   'app.home',
+  'app.common',
   'app.about',
   'app.contact'
 ]))

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
     <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 
@@ -19,22 +21,8 @@
 <body>
 
 
-<div class="main">
-  <header class="header">
-    <ul class="header__labels">
-      <li>
-        <a href="#/">Home</a>
-      </li>
-      <li>
-        <a href="#/about">About</a>
-      </li>
-      <li>
-        <a href="#/contact">Contact</a>
-      </li>
-    </ul>
-  </header>
-  <div ui-view class="content"></div>
-</div>
+<ui-view></ui-view>
+
 
 
 

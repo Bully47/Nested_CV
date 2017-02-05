@@ -1,7 +1,7 @@
 ((app)=>{
     'use strict'
     app.component('home',{
-      templateUrl:'public/js/components/home/home.html',
+      templateUrl:'js/components/home/home.html',
       controller:[ function(){
 
       }]
