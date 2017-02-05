@@ -8,5 +8,6 @@
   'app.home',
   'app.common',
   'app.about',
-  'app.contact'
+  'app.contact',
+  'app.services'
 ]))

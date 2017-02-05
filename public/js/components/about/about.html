@@ -1,16 +1,20 @@
+<navbar></navbar>
+<div class="row cardcontainer" ng-repeat="cars in $ctrl.cars | filter: searchText">
+    <div ui-sref="about({id:uniquorns._id})" class="col s12 m6" style="width: 45%; margin-left:auto; left: auto; right: auto;">
+        <div class="card horizontal card-background">
+            <div class="card-image">
+                <img class="uniqpicture" ng-src="{{cars.picture}}">
+            </div>
+            <div class="card-stacked">
+              <h5 class="titlebcard">{{cars.brand}} {{cars.year}}</h5>
+                <div class="card-content">
+                    <p>{{cars.description | limitTo: 100}}</p>
+                </div>
 
-<div class="row">
-    <div class="col s12 m6 l3">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title">Card Title</span>
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+                <div>
+                <a ui-sref="uniquorn.list"><img class="circle responsive-img cardavatar right" ng-src="{{cars.owner.avatar}}"></a>
+                </div>
+             </div>
         </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
-          <a href="#">This is a link</a>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
