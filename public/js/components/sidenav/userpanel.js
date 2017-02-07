@@ -1,24 +1,28 @@
 ((app) => {
     'use strict'
-    app.component('navbar', {
-        templateUrl: 'js/components/common/navbar.html',
-        controller: [ 'carsServices','ownersServices', '$state', function($carsServices, ownersServices, $state) {
+    app.component('userPanel', {
+        templateUrl: 'js/components/sidenav/userpanel.html',
+        controller: ['ownersServices', '$state', '$log', '$stateParams', function(ownersServices, $state, $log, $stateParams) {
             angular.extend(this, {
                 $onInit() {
                     ownersServices.getCurrent().then((user) => {
-                        this.user = user
+                        this.owner = user
                     }).catch((err) => {
 
                     })
                 },
-                disconnect() {
-                    ownersServices.disconnect().then(() => {
+                disconnect(owner) {
+                    ownersServices.disconnect(owner).then(() => {
                         Materialize.toast('Disconnected', 4000, 'toast-warning')
                         this.user = null
                         $state.reload()
                     })
                 }
+
             })
+
+
         }]
     })
-})(require('angular').module('app.common'))
+
+})(angular.module('app.userpanel'))

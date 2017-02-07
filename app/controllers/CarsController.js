@@ -5,19 +5,19 @@ let Controller = require('./Controller');
 let formidable = require('formidable'),
 fs = require('fs')
 
-const CAR = require('../models/cars')
+const Car = require('../models/cars')
 
-class CarController extends Controller {
+class CarsController extends Controller {
 
     constructor() {
       // Call parent constructor with model param
-      super(CAR)
+      super(Car)
     }
     find(req, res, next) {
         // Get all documents and filter with queries string (req.query : ex. http://domain.ext/api/?query=string)
         this.model
         .find(req.query.id)
-        .populate('Owner')
+        .populate('owner')
         .exec((err, documents) => {
             res.json(documents)
         })
@@ -26,7 +26,7 @@ class CarController extends Controller {
        // Get all documents and filter with queries string (req.query : ex. http://domain.ext/api/?query=string)
        this.model
        .findById(req.params.id)
-       .populate('Owner')
+       .populate('owner')
        .exec((err, documents) => {
            res.json(documents)
        })
@@ -56,9 +56,9 @@ class CarController extends Controller {
                   password: 0
                 })
                 .populate('Owner')
-                .exec((err, cars) => {
+                .exec((err, car) => {
 
-                  res.json(cars)
+                  res.json(car)
                 })
               }
             })
@@ -76,7 +76,7 @@ class CarController extends Controller {
               .findById(req.params.id, {
                 password: 0
               })
-              .populate('Owner')
+              .populate('owner')
               .exec((err, cars) => {
                 res.json(cars)
               })
@@ -86,4 +86,4 @@ class CarController extends Controller {
 
 }
 
-module.exports = CarController
+module.exports = CarsController

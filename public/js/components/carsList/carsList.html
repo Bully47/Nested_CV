@@ -1,18 +1,17 @@
-<navbar></navbar>
 <div class="row cardcontainer" ng-repeat="cars in $ctrl.cars | filter: searchText">
-    <div ui-sref="about({id:uniquorns._id})" class="col s12 m6" style="width: 45%; margin-left:auto; left: auto; right: auto;">
+    <div ui-sref="cars.item({id:car._id})" class="col s12 m6" style="width: 45%; margin-left:auto; left: auto; right: auto;">
         <div class="card horizontal card-background">
             <div class="card-image">
                 <img class="uniqpicture" ng-src="{{cars.picture}}">
             </div>
             <div class="card-stacked">
-              <h5 class="titlebcard">{{cars.brand}} {{cars.year}}</h5>
+              <h5 class="titlebcard">{{cars.name}} {{cars.birth}}</h5>
                 <div class="card-content">
                     <p>{{cars.description | limitTo: 100}}</p>
                 </div>
 
                 <div>
-                <a ui-sref="uniquorn.list"><img class="circle responsive-img cardavatar right" ng-src="{{cars.owner.avatar}}"></a>
+                <a ui-sref="cars.list"><img class="circle responsive-img cardavatar right" ng-src="{{cars.owner.avatar}}"></a>
                 </div>
              </div>
         </div>

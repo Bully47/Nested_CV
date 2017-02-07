@@ -6,26 +6,36 @@
    function($locationProvider, $stateProvider, $urlRouterProvider){
     $locationProvider.hashPrefix('!');
     $urlRouterProvider.otherwise('/');
-    $stateProvider.state('home', {
-				        url: '/',
-                templateUrl: `js/components/common/common.html`
-			       })
-             .state('about', {
-            	  url: '/about',
-                template: '<about></about>'
-             })
-             .state('contact', {
-                redirectTo: 'contact',
-                url: '/contact',
-                template: '<contact></contact>'
-             })
-             .state('contact.email', {
-               url: '/email',
-               template: '<contact-email></contact-email>'
-             })
-             .state('contact.phone', {
-                url: '^/phone',
-                template:'<contact-phone></contact-phone>'
-             })
+    $stateProvider.state('login', {
+                    url: '',
+                    abstract: true,
+                    template: '<login></login>'
+                })
+                .state('login.connect', {
+                    url: '/login',
+                    template: '<connect></connect>'
+                })
+                .state('login.create', {
+                    url: '/new/account',
+                    template: '<account></account>'
+                })
+                .state('cars', {
+                    templateUrl: `js/components/common/dashboard.html`,
+                    url: '',
+                    abstract: true
+                })
+                .state('cars.list', {
+                    url: '/carlist',
+                    template: '<cars-list></cars-list>'
+                })
+                .state('cars.new', {
+                    template: '<add-car></add-car>',
+                    url: '/car/new'
+                })
+                .state('cars.item', {
+                    template: '<cars-item></cars-item>',
+                    url: '/car/:id'
+                })
+
           }])
 })(require('angular').module('app.config', []))

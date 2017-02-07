@@ -1,0 +1,65 @@
+<div class="row">
+    <div class="col s12 m9 l11 uniquornsItem card horizontal m4">
+        <div class="col s12 m3 no-left-margin">
+            <div class="card-image">
+                <img ng-src="{{$ctrl.cars.picture}}">
+            </div>
+            <div>
+
+                <div>
+
+                    <form action="#">
+                      <div class="file-field input-field">
+                          <div class="btn">
+                              <span>Image *</span>
+                              <fichier ng-model="$ctrl.file.name" required></fichier>
+                          </div>
+                          <div class="file-path-wrapper">
+                              <input class="file-path validate" type="text">
+                          </div>
+                      </div>
+                  </form>
+                </div>
+
+                <div class="btnpanel">
+                    <a class="waves-effect waves-light btn btn-margin" ng-click="$ctrl.save($ctrl.car, $ctrl.file.name)">Validate</a>
+                    <a class="waves-effect waves-light btn btn-margin" ng-click="$ctrl.cancel($ctrl.car)">Cancel</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-content col s12 m6">
+
+            <form class="row s12 m6">
+
+
+
+                <div class="input-field row s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="icon_prefix" type="text" class="validate" ng-model="$ctrl.uniquorn.name">
+                    <label for="icon_prefix">Name</label>
+                </div>
+                <div class="input-field row s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="" type="text" class="validate" ng-model="$ctrl.car.year">
+                    <label for="">Gender</label>
+                </div>
+
+
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="textarea1" class="validate materialize-textarea" ng-model="$ctrl.car.description"></textarea>
+                                <label for="textarea1">Description</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <a><img ng-src="{{$ctrl.cars.owner.avatar}}" class="circle card-avatar right"></a>
+                </div>
+
+            </form>
+        </div>
+    </div>

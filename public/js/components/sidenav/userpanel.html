@@ -1,0 +1,35 @@
+
+
+<!-- /////////////////
+START OF SIDE NAV
+//////////////////////-->
+
+<div class="row">
+
+    <div class="col s12 m8 l9 center-align">
+        <ul id="nav-mobile" class="side-nav left-align" style="width: 400px;transform: translateY(100px); left:auto; right:0;">
+
+
+                <div class="avatar center">
+
+                    <a ui-sref="cars.list"><img class="circle responsive-img avatar " ng-src="{{$ctrl.owner.avatar}}"></a>
+
+                </div>
+
+
+          <div class="list">
+                <ul>
+                    <li><a href="#!name"><span class="white-text name center"><h4><i>{{$ctrl.owner.firstname}}</i></h4></span></a></li>
+                    <li><a href="#!"><h5>Messages</h5></a><span class="new badge">4</span></li>
+                    <li><a ui-sref="cars.item({id:cars._id})"><h5>My Muscle Cars</h5></a></li>
+                    <li><a href="#!"><h5>Profile</h5></a></li>
+                    <li><a href="#!"><h5>Logout</h5></a></li>
+                </ul>
+            </div>
+             <a ui-sref="car.new" class="btn-floating halfway-fab waves-effect waves-light blue right"><i class="material-icons">add</i></a>
+            <!-- /////////////////
+      END OF SIDE NAV
+    //////////////////////-->
+        </ul>
+    </div>
+</div>
