@@ -46,7 +46,7 @@
             // If you want to use in view you can call with $ctrl.delete()
             this.delete = () => {
                 // Call delete method form PostsService with post
-                carsServices.delete(this.cars).then((res) => {
+                carsServices.delete(this.car).then((res) => {
                     // when this request receive response we change state to app.blog.list (redirection to list)
                     $state.go('car.list')
                 })

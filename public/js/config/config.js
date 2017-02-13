@@ -5,7 +5,7 @@
    app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider',
    function($locationProvider, $stateProvider, $urlRouterProvider){
     $locationProvider.hashPrefix('!');
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/carlist');
     $stateProvider.state('login', {
                     url: '',
                     abstract: true,
@@ -35,6 +35,10 @@
                 .state('cars.item', {
                     template: '<cars-item></cars-item>',
                     url: '/car/:id'
+                })
+                .state('profile', {
+                    template: '<profile></profile>',
+                    url: '/profile'
                 })
 
           }])

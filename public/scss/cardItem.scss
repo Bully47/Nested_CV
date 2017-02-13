@@ -1,0 +1,122 @@
+@import 'styles';
+
+.profile-card {
+position: relative;
+overflow: hidden;
+margin: 0.5rem 0 1rem 0;
+background-color: #fff;
+border-radius: 2px;
+}
+
+.card-profile-image {
+     width: 70px;
+     position: absolute;
+     top: 110px;
+     z-index: 1;
+     cursor: pointer;
+}
+.material-tooltip {
+    padding: 10px 8px;
+    font-size: 1rem;
+    z-index: 1000;
+    background-color: transparent;
+    border-radius: 2px;
+    color: #fff;
+    min-height: 36px;
+    line-height: 1rem;
+    // max-width: 350px;
+    opacity: 0;
+    display: none;
+    position: absolute;
+    text-align: center;
+    overflow: hidden;
+    left:0;
+    top:0;
+    will-change: top, left;
+}
+
+.card .card-reveal {
+    padding: 20px;
+    position: absolute;
+    background-color: #FFF;
+    width: 100%;
+    overflow-y: auto;
+    top: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+
+#profile-page-header .card-image {
+  height: 250px;
+}
+#profile-page-header .card-profile-image {
+  width: 110px;
+  position: absolute;
+  top: 190px;
+  z-index: 1;
+  left: 40px;
+  cursor: pointer;
+  margin: 0;
+}
+#profile-page-header .card-content{
+  margin-top: -40px;
+}
+#profile-page-header .card-content .card-title{
+  margin-bottom: 0px;
+}
+
+/*profile-page-wall*/
+
+#profile-page-wall .profile-image-post{
+  width: 60px;
+  margin: 30px 10px;
+}
+#profile-page-wall .tab-profile .tab i{
+  font-size: 16px;
+}
+#profile-page-wall .tab-content{
+  padding: 10px;
+}
+#profile-page-wall .share-icons{
+  margin-top: 10px;
+}
+#profile-page-wall .share-icons i{
+  padding: 0px 5px;
+}
+
+
+#profile-page-wall-posts .profile-small{
+  height: 250px;
+  overflow: hidden;
+}
+#profile-page-wall-posts .profile-medium{
+  height: 350px;
+  overflow: hidden;
+}
+#profile-page-wall-posts .profile-large{
+  height: 450px;
+  overflow: hidden;
+}
+#profile-page-wall-posts .card-profile-title{
+  font-size: 16px;
+  padding: 20px;
+  border-radius: 0 0 2px 2px;
+}
+#profile-page-wall-posts .card-action-share{
+  padding: 16px;
+}
+
+/*----------------------------------------
+    Shadow effect
+------------------------------------------*/
+
+.shadow-demo {
+  background-color: #26a69a;
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+}
+.collapsible-header {
+  font-weight: 500;
+}

@@ -4,9 +4,10 @@
         templateUrl: 'js/components/common/navbar.html',
         controller: [ 'carsServices','ownersServices', '$state', function($carsServices, ownersServices, $state) {
             angular.extend(this, {
-                $onInit() {
+
+            $onInit() {
                     ownersServices.getCurrent().then((user) => {
-                        this.user = user
+                        this.owner = user
                     }).catch((err) => {
 
                     })
@@ -18,6 +19,7 @@
                         $state.reload()
                     })
                 }
+
             })
         }]
     })

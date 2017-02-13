@@ -26,8 +26,6 @@
     }]
 
     app.directive('fichier', file)
-
-
 })(require('angular').module('app', [
   require('angular-ui-router'),
   require('angular-cookies'),
@@ -38,5 +36,6 @@
   'app.common',
   'app.login',
   'app.userpanel',
-  'app.addNew'
+  'app.addNew',
+  'app.profile'
 ]))

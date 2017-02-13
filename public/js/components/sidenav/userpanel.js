@@ -18,10 +18,16 @@
                         $state.reload()
                     })
                 }
+              })
 
-            })
 
 
+                                      ownersServices.getCurrent().then((res) => {
+                                          this.owner = res
+                                          console.log(res);
+                                      }).catch(() => {
+                                          $state.go('login.connect')
+                                      })
         }]
     })
 

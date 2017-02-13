@@ -30,7 +30,7 @@ exports.config = {
     },
     npm: {
         enabled: true,
-        compilers: ['angular', 'angular-ui-router', 'angular-cookies', 'angular-materialize', 'jquery']
+        compilers: ['angular', 'angular-ui-router', 'angular-cookies', 'angular-materialize', 'jquery','mdi']
     },
     conventions: {
         assets: /static[\\/]/,

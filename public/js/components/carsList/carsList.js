@@ -15,7 +15,7 @@
                             $state.go('login.connect')
                         })
 
-                      carsServices.get().then((response) => {
+                         carsServices.get().then((response) => {
                             this.cars = response.data
                             console.log(this.cars);
                         })

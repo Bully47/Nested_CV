@@ -1,8 +1,6 @@
+<!--
 
 
-<!-- /////////////////
-START OF SIDE NAV
-//////////////////////-->
 
 <div class="row">
 
@@ -27,9 +25,49 @@ START OF SIDE NAV
                 </ul>
             </div>
              <a ui-sref="car.new" class="btn-floating halfway-fab waves-effect waves-light blue right"><i class="material-icons">add</i></a>
-            <!-- /////////////////
-      END OF SIDE NAV
-    //////////////////////-->
+
         </ul>
     </div>
 </div>
+-->
+
+<div class="wrapper">
+
+            <!-- START LEFT SIDEBAR NAV-->
+            <aside id="left-sidebar-nav">
+                <ul id="slide-out" class="side-nav fixed leftside-navigation ps-container ps-active-y" style="width: 300px;">
+                    <li class="user-details cyan darken-2">
+                        <div class="row">
+                            <div class="col col s4 m4 l4">
+                                <img ng-src="{{$ctrl.owner.avatar}}" alt="" class="circle responsive-img valign profile-image">
+                            </div>
+                            <div class="col col s8 m8 l8">
+
+                                <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">{{$ctrl.owner.firstname}}<i class="mdi-navigation-arrow-drop-down right"></i></a><ul id="profile-dropdown" class="dropdown-content">
+                                    <li><a href="#"><i class="mdi-action-face-unlock"></i> Profile</a>
+                                    </li>
+                                    <li><a href="#"><i class="mdi-action-settings"></i> Settings</a>
+                                    </li>
+                                    <li><a href="#"><i class="mdi-communication-live-help"></i> Help</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li><a href="#"><i class="mdi-action-lock-outline"></i> Lock</a>
+                                    </li>
+                                    <li><a href="#"><i class="mdi-hardware-keyboard-tab"></i> Logout</a>
+                                    </li>
+                                </ul>
+                                <p class="user-roal">Administrator</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bold active"><a href="index.html" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i>Dashboard</a>
+                    </li>
+                    <li class="bold"><a href="app-email.html" class="waves-effect waves-cyan"><i class="mdi-communication-email"></i>Mailbox<span class="new badge">4</span></a>
+                    </li>
+                    <li class="bold"><a href="app-calendar.html" class="waves-effect waves-cyan"><i class="mdi-editor-insert-invitation"></i>Calender</a>
+                    <li class="bold"><a class="waves-effect waves-cyan"><i class="mdi-action-invert-colors"></i>Muscle Cars</a>
+                    </li>
+                  </li>
+                </ul>
+              </aside>
+            </div>
