@@ -8,7 +8,7 @@
                     ownersServices.getCurrent().then((user) => {
                         this.owner = user
                     }).catch((err) => {
-
+                        $state.go('login.connect')
                     })
                 },
                 disconnect(owner) {
@@ -20,14 +20,6 @@
                 }
               })
 
-
-
-                                      ownersServices.getCurrent().then((res) => {
-                                          this.owner = res
-                                          console.log(res);
-                                      }).catch(() => {
-                                          $state.go('login.connect')
-                                      })
         }]
     })
 

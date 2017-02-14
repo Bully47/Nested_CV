@@ -3,13 +3,18 @@
   app.component('profile',{
     templateUrl: '/js/components/profile/profile.html',
     controller:['ownersServices','carsServices','$state','$stateParams',
-      function(ownerServices,carsServices,$state,$stateParams ){
+      function(ownersServices,carsServices,$state,$stateParams ){
 
-          carsServices.get().then((response) => {
-           this.cars = response.data
-           console.log(this.cars);
-       })
+        angular.extend(this, {
 
-    }]
+        $onInit() {
+                ownersServices.getCurrent().then((user) => {
+                    this.owner = user
+                }).catch((err) => {
+
+                })
+            }
+          })
+      }]
   })
 })(require('angular').module('app.profile'))

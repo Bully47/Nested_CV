@@ -24,13 +24,19 @@ exports.config = {
         stylesheets: {
             joinTo: {
                 'css/vendor.min.css': [],
-                'css/app.min.css': /^public\/scss/
+                'css/app.min.css': /^public\/scss/,
+
+            },
+            order: {
+                before: [
+                    'node_modules/mdi/scss/materialdesignicons.scss'
+                ]
             }
         }
     },
     npm: {
         enabled: true,
-        compilers: ['angular', 'angular-ui-router', 'angular-cookies', 'angular-materialize', 'jquery','mdi']
+        compilers: ['angular', 'angular-ui-router', 'angular-cookies', 'angular-materialize', 'jquery', 'Material-Design-Icons']
     },
     conventions: {
         assets: /static[\\/]/,

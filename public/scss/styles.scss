@@ -1,3 +1,32 @@
+@font-face {
+  font-family: 'mdi';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://mdi/fonts/materialdesignicons-webfont.eot); /* For IE6-8 */
+  src: local('materialdesignicons-font'),
+       url(https://mdi/fonts/materialdesignicons-webfont.woff2) format('woff2'),
+       url(https://mdi/fonts/materialdesignicons-webfont.woff) format('woff'),
+       url(https://mdi/fonts/materialdesignicons-webfont.ttf) format('truetype');
+}
+
+.mdi {
+  font-family: 'mdi';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+}
+
+
+
+
 /* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+scss+bash */
 /**
  * prism.js default theme for JavaScript, CSS and HTML
@@ -1936,101 +1965,7 @@ tr.group:hover {
 }
 
 
-/*----------------------------------------
-    Contact Page (Map-card)
-------------------------------------------*/
 
-/* ---- Map card ----*/
-.map-card #map-canvas {
-    width: 100%;
-    height: 342px;
-}
-.map-card .card .card-content .card-title, .map-card .card .card-reveal .card-title {
-  font-size: 1.2rem;
-  line-height: 1.6rem;
-  font-weight: 400;
-}
-.map-card .btn-move-up{
-    top: -38px;
-}
-/* ---- Map Contact Page ----*/
-#map-canvas {
-    width: 100%;
-    height: 250px;
-}
-
-/*----------------------------------------
-    Pricing Plan  Page
-------------------------------------------*/
-.plans-container .collection {
-  border: none;
-}
-.plans-container .collection .collection-item {
-  border-bottom: none;
-  text-align: center;
-  font-size: 1.07rem;
-  line-height: 1.6em;
-}
-.plans-container .collection .collection-item:before {
-  font-size: 1.28rem;
-  line-height: 1.6em;
-  color: #009315;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-  content: "\e623";
-  margin-right: 10px;
-}
-.plans-container .card .card-image {
-  position: relative;
-  width: 100%;
-}
-.plans-container .card .card-image .card-title {
-  position: relative;
-  font-size: 1.28rem;
-  line-height: 1.6em;
-  text-align: center;
-  width: 100%;
-  padding: 10px 15px;
-  text-transform: uppercase;
-  background: rgba(0, 0, 0, 0.1);
-}
-.plans-container .card .card-image .price {
-  position: relative;
-  font-size: 5rem;
-  line-height: 1.6em;
-  color: #fff;
-  font-weight: 300;
-  text-align: center;
-}
-.plans-container .card .card-image .price sup {
-  font-weight: 100;
-  font-size: 1.42rem;
-  line-height: 1.6em;
-  top: -35px;
-}
-.plans-container .card .card-image .price sub {
-  font-weight: 100;
-  font-size: 1.42rem;
-  line-height: 1.6em;
-  top: 0px;
-}
-.plans-container .card .card-image .price-desc {
-  text-align: center;
-  color: #fff;
-  padding-bottom: 10px;
-}
-.plans-container .card .card-content {
-  padding: 0;
-}/*
-@media screen and (min-width: 601px) {
-  .plans-container .card {
-    min-height: 550px;
-  }
-}*/
 
 
 /*----------------------------------------
@@ -2141,16 +2076,7 @@ footer.page-footer {
 }
 
 
-/* For Tables ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-/* STYLES GO HERE */
-  .doughnut-chart-status{
-    display: none;
-  }
-  #card-stats .card-stats-compare{
-      font-size: 0.8rem;
-  }
-}
+
 
 
 

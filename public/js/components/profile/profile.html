@@ -1,0 +1,87 @@
+<navbar></navbar>
+<div id="profile-page-header" class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" ng-src="img/cubancars1.jpg" alt="user background">
+                </div>
+                <figure class="card-profile-image">
+                    <img ng-src="{{$ctrl.owner.avatar}}" alt="profile image" class="circle z-depth-2 responsive-img activator">
+                </figure>
+                <div class="card-content">
+                  <div class="row">
+                    <div class="col s3 offset-s2">
+                        <h4 class="card-title grey-text text-darken-4">{{$ctrl.owner.firstname}}</h4>
+                        <p class="medium-small grey-text">{{$ctrl.owner.job}}</p>
+                    </div>
+                    <div class="col s2 center-align">
+                        <h4 class="card-title grey-text text-darken-4">{{$ctrl.owner.age}}</h4>
+                        <p class="medium-small grey-text">Age</p>
+                    </div>
+                    <div class="col s2 center-align">
+                        <h4 class="card-title grey-text text-darken-4">{{$ctrl.owner.sold}}</h4>
+                        <p class="medium-small grey-text">Cars Sold</p>
+                    </div>
+                    <div class="col s2 center-align">
+                        <h4 class="card-title grey-text text-darken-4">$ 1,253,000</h4>
+                        <p class="medium-small grey-text">Busness Profit</p>
+                    </div>
+
+                    <div class="col s1 right-align">
+                      <a class="btn-floating activator waves-effect waves-light darken-2 right">
+                          <i class="mdi-action-perm-identity"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-reveal" style="display: none; transform: translateY(0px);">
+                    <p>
+                      <span class="card-title grey-text text-darken-4">Roger Waters <i class="mdi-navigation-close right"></i></span>
+                      <span><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> Project Manager</span>
+                    </p>
+
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+
+                    <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> +1 (612) 222 8989</p>
+                    <p><i class="mdi-communication-email cyan-text text-darken-2"></i> mail@domain.com</p>
+                    <p><i class="mdi-social-cake cyan-text text-darken-2"></i> 18th June 1990</p>
+                    <p><i class="mdi-device-airplanemode-on cyan-text text-darken-2"></i> BAR - AUS</p>
+                </div>
+
+                 <div class="card light-blue">
+                  <div class="card-content white-text">
+                    <span class="card-title">About Me!</span>
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                  </div>
+                </div>
+                <div id="UpdateStatus" class="tab-content col s12  grey lighten-4">
+                        <div class="row">
+                          <div class="col s2">
+                            <img src="images/avatar.jpg" alt="" class="circle responsive-img valign profile-image-post">
+                          </div>
+                          <div class="input-field col s10">
+                            <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
+                            <label for="textarea" class="">What's on your mind?</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col s12 m6 share-icons">
+                            <a href="#"><i class="mdi-image-camera-alt"></i></a>
+                            <a href="#"><i class="mdi-action-account-circle"></i></a>
+                            <a href="#"><i class="mdi-hardware-keyboard-alt"></i></a>
+                            <a href="#"><i class="mdi-communication-location-on"></i></a>
+                          </div>
+                          <div class="col s12 m6 right-align">
+                             <!-- Dropdown Trigger -->
+                              <a class="dropdown-button btn" href="#" data-activates="profliePost"><i class="mdi-action-language"></i> Public</a><ul id="profliePost" class="dropdown-content">
+                                <li><a href="#!"><i class="mdi-action-language"></i> Public</a></li>
+                                <li><a href="#!"><i class="mdi-action-face-unlock"></i> Friends</a></li>
+                                <li><a href="#!"><i class="mdi-action-lock-outline"></i> Only Me</a></li>
+                              </ul>
+
+                              <!-- Dropdown Structure -->
+
+
+                              <a class="waves-effect waves-light btn"><i class="mdi-maps-rate-review left"></i>Post</a>
+                          </div>
+                        </div>
+                      </div>
+            </div>
