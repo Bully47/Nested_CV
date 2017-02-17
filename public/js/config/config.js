@@ -40,6 +40,14 @@
                     template: '<profile></profile>',
                     url: '/profile'
                 })
+                .state('mailbox', {
+                      template: '<mailbox></mailbox>',
+                      url: '/mailbox'
+                })
+                .state('calender', {
+                      template: '<calender></calender>',
+                      url: '/calender'
+                })
 
           }])
 })(require('angular').module('app.config', []))

@@ -36,6 +36,10 @@
             delete(car) {
                 return $http.delete('/api/cars/' + car._id)
             },
+            findOne(search) {
+              return $http.get('/api/search/' + search)
+            },
+
 
             upload(image) {
                 return new Promise((resolve, reject) => {
@@ -57,13 +61,7 @@
                     xhr.send(fd)
                 })
             },
-            filter(filtre) {
-                if (!filtre.name)
-                    delete filtre.name
-                return $http.get('/api/cars', {
-                    params: filtre
-                })
-            }
+        
         }
     })
 })(angular.module('app.services'))

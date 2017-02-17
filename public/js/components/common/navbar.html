@@ -11,12 +11,13 @@
                   </ul>
 
 
-                    <div class="header-search-wrapper hide-on-med-and-down">
-                        <i class="mdi-action-search active"></i>
-                        <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Explore Cuban Cars">
-                    </div>
+                    <form ng-submit="$event.preventDefault()" class="header-search-wrapper hide-on-med-and-down">
+                      <i class="mdi-action-search active"></i>
+
+                        <input type="text" ng-click="$ctrl.filter($ctrl.brand)" name="Search" class="header-search-input z-depth-2" placeholder="Explore Cuban Cars" ng-model="$ctrl.brand">
+                    </form>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen"><i class="mdi-action-settings-overscan"></i></a>
+                        <li><a type="submit" href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen"><i class="mdi-action-settings-overscan"></i></a>
                         </li>
                         <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light"><i class="mdi-navigation-apps"></i></a>
                         </li>

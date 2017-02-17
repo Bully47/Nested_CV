@@ -37,5 +37,7 @@
   'app.login',
   'app.userpanel',
   'app.addNew',
-  'app.profile'
+  'app.profile',
+  'app.mailbox',
+  'app.calender'
 ]))
