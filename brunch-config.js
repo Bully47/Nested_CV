@@ -17,20 +17,17 @@ exports.config = {
                       'node_modules/angular/*.js',
                       'public/js/app.js',
                       'public/js/**/*.md.js',
-                      'public/js/components/**/*.js'
-                ]
+                      'public/js/components/**/*.js',
+                      'public/materialize-plugins/**/*.js',
+                      'public/materialize-plugins/**/*.min.js'
+                    ]
             }
         },
         stylesheets: {
             joinTo: {
                 'css/vendor.min.css': [],
-                'css/app.min.css': /^public\/scss/,
+                'css/app.min.css': /^public\/scss/
 
-            },
-            order: {
-                before: [
-                    'node_modules/mdi/scss/materialdesignicons.scss'
-                ]
             }
         }
     },

@@ -5,12 +5,12 @@
 
 
 
-<div class="col s12 m4 l4">
+<div class="col s12 m12 l12">
 
           <h4 class="header"></h4>
    <div id="profile-card" class="card">
     <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" src="images/user-bg.jpg" alt="user bg">
+        <img class="activator" src="/img/user-bg.jpg" alt="user bg">
     </div>
     <div class="card-content">
         <img ng-src="{{$ctrl.cars.owner.avatar}}" alt="" class="circle responsive-img activator card-profile-image">
@@ -18,10 +18,10 @@
             <i class="mdi-editor-mode-edit"></i>
         </a>
 
-        <span class="card-title activator grey-text text-darken-4">Roger Waters</span>
-        <p><i class="mdi-action-perm-identity"></i> Project Manager</p>
+        <span class="card-title activator grey-text text-darken-4">{{cars.brand}}</span>
+        <p><i class="mdi-action-perm-identity"></i>Project Manager</p>
         <p><i class="mdi-action-perm-phone-msg"></i> +1 (612) 222 8989</p>
-        <p><i class="mdi-communication-email"></i> yourmail@domain.com</p>
+        <p><i class="mdi-communication-email"></i> {{$ctrl.cars.owner.email}}</p>
 
     </div>
 
@@ -35,7 +35,7 @@
         <p>Here is some more information about this card.</p>
         <p><i class="mdi-action-perm-identity"></i> Project Manager</p>
         <p><i class="mdi-action-perm-phone-msg"></i> +1 (612) 222 8989</p>
-        <p><i class="mdi-communication-email"></i> yourmail@domain.com</p>
+        <p><i class="mdi-communication-email"></i>{{cars.owner.email}}</p>
         <p><i class="mdi-social-cake"></i> 18th June 1990
         </p>
         <p>

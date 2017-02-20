@@ -13,6 +13,15 @@
                 }).catch((err) => {
 
                 })
+                carsServices.get().then((response) => {
+                   this.cars = response.data
+                   console.log(this.cars);
+               })
+
+
+
+
+
             }
           })
       }]

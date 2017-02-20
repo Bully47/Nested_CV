@@ -33,12 +33,9 @@ class CarsController extends Controller {
     }
 
       findOne(req, res, next) {
-            let search = new RegExp("(" + req.params.search + ")")
-            this.model.find({
-                $or: [{
-                    'brand': search
-                     }]
-            }, (err, cars) => {
+           this.model
+           .findOne(req.params.id)
+             .exec((err, cars) => {
                 if (err) next(err)
                 else
                     res.json(cars)

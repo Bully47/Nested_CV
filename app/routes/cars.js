@@ -35,7 +35,7 @@ module.exports = (app) => {
     app.delete('/cars/:id', (req, res, next) => {
         return ctrl.delete(req, res, next)
     })
-    app.get('/search/:recherche', (req, res, next) => {
+    app.get('/cars/:search', (req, res, next) => {
     return ctrl.findOne(req, res, next)
       })
 

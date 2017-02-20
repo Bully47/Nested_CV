@@ -15,14 +15,14 @@
                             $state.go('login.connect')
                         })
 
-                         carsServices.get().then((response) => {
-                            this.cars = response.data
-                            console.log(this.cars);
-                        })
+                        carsServices.get().then((response) => {
+                           this.cars = response.data
+                           console.log(this.cars);
+                       })
 
-                        if ($stateParams.uniquorn) {
+                        if ($stateParams.car) {
                             carsServices.filter($stateParams).then((response) => {
-                                this.cars = response.data
+                                this.car = response.data
                             })
 
                         } else {

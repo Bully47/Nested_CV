@@ -36,8 +36,8 @@
             delete(car) {
                 return $http.delete('/api/cars/' + car._id)
             },
-            findOne(search) {
-              return $http.get('/api/search/' + search)
+            findOne(car, search) {
+              return $http.get('/api/cars/' + car._id, search)
             },
 
 
@@ -60,8 +60,9 @@
                     fd.append('file', image)
                     xhr.send(fd)
                 })
-            },
-        
+            }
+
+
         }
     })
 })(angular.module('app.services'))

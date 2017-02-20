@@ -7,7 +7,7 @@
         templateUrl: '/js/components/carsItem/carsItem.html',
         controller: ['ownersServices', 'carsServices', '$stateParams', '$state', function(ownersServices, carsServices, $stateParams, $state) {
 
-            let _previous = {}
+
 
             carsServices.getById($stateParams.id).then((res) => {
                 // when this request receives response we affect response data to this controller variable post
@@ -27,6 +27,10 @@
             }).catch((err) => {
 
             })
+            carsServices.get($stateParams.id).then((response) => {
+               this.cars = response.data
+               
+           })
 
 
 

@@ -6,14 +6,7 @@
             angular.extend(this, {
 
                 $onInit() {
-
-                    this.filter = (brand) => {
-                        $state.go('cars.list', {
-                            brand: brand
-                        })
-                    }
-
-                    ownersServices.getCurrent().then((user) => {
+                ownersServices.getCurrent().then((user) => {
                         this.owner = user
                     }).catch((err) => {
 
@@ -28,6 +21,11 @@
                 }
 
             })
+            this.filter = (brand) => {
+                $state.go('cars.list', {
+                    cars: brand
+                })
+            }
         }]
     })
 })(require('angular').module('app.common'))
