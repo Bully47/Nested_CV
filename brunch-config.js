@@ -8,18 +8,22 @@ exports.config = {
     files: {
         javascripts: {
             joinTo: {
-                'js/vendor.min.js': /^node_modules/,
-                'js/app.min.js': /^public\/js/
+
+                  'js/vendor.min.js': /^node_modules/,
+                  'js/plugins.min.js': /^node_modules\/materialize-v3.1\/demo\/js\/plugins/,
+                  'js/app.min.js': /^public\/js/,
+                  'js/mplugins.min.js': /^public\/materialize-plugins/,
             },
             order: {
                 before: [
-                      'node_modules/jquery/dist/*.js',
-                      'node_modules/angular/*.js',
-                      'public/js/app.js',
-                      'public/js/**/*.md.js',
-                      'public/js/components/**/*.js',
-                      'public/materialize-plugins/**/*.js',
-                      'public/materialize-plugins/**/*.min.js'
+                'node_modules/jquery/dist/*.js',
+                'node_modules/angular/*.js',
+                'node_modules/materialize-v3.1/demo/js/plugins/**/*.js',
+                'public/materialize-plugins/*.js',
+                'public/materialize-plugins/**/*.min.js',
+                'public/js/app.js',
+                'public/js/**/*.md.js',
+                'public/js/components/**/*.js'
                     ]
             }
         },

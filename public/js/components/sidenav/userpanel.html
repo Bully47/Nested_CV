@@ -1,77 +1,5 @@
-<!--
 
 
-
-<div class="row">
-
-    <div class="col s12 m8 l9 center-align">
-        <ul id="nav-mobile" class="side-nav left-align" style="width: 400px;transform: translateY(100px); left:auto; right:0;">
-
-
-                <div class="avatar center">
-
-                    <a ui-sref="cars.list"><img class="circle responsive-img avatar " ng-src="{{$ctrl.owner.avatar}}"></a>
-
-                </div>
-
-
-          <div class="list">
-                <ul>
-                    <li><a href="#!name"><span class="white-text name center"><h4><i>{{$ctrl.owner.firstname}}</i></h4></span></a></li>
-                    <li><a href="#!"><h5>Messages</h5></a><span class="new badge">4</span></li>
-                    <li><a ui-sref="cars.item({id:cars._id})"><h5>My Muscle Cars</h5></a></li>
-                    <li><a href="#!"><h5>Profile</h5></a></li>
-                    <li><a href="#!"><h5>Logout</h5></a></li>
-                </ul>
-            </div>
-             <a ui-sref="car.new" class="btn-floating halfway-fab waves-effect waves-light blue right"><i class="material-icons">add</i></a>
-
-        </ul>
-    </div>
-</div>
--->
-
-
-
-            <!-- START LEFT SIDEBAR NAV-->
-          <!--  <aside id="left-sidebar-nav">
-                <ul id="slide-out" class="side-nav fixed leftside-navigation ps-container ps-active-y" style="width: 300px;">
-                    <li class="user-details cyan darken-2">
-                        <div class="row">
-                            <div class="col col s4 m4 l4">
-                                <img ng-src="{{$ctrl.owner.avatar}}" alt="" class="circle responsive-img valign profile-image">
-                            </div>
-                            <div class="col col s8 m8 l8">
-
-                                <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">{{$ctrl.owner.firstname}}<i class="mdi-navigation-arrow-drop-down right"></i></a><ul id="profile-dropdown" class="dropdown-content">
-                                    <li><a href="#"><i class="mdi-action-face-unlock"></i> Profile</a>
-                                    </li>
-                                    <li><a href="#"><i class="mdi-action-settings"></i> Settings</a>
-                                    </li>
-                                    <li><a href="#"><i class="mdi-communication-live-help"></i> Help</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li><a href="#"><i class="mdi-action-lock-outline"></i> Lock</a>
-                                    </li>
-                                    <li><a href="#"><i class="mdi-hardware-keyboard-tab"></i> Logout</a>
-                                    </li>
-                                </ul>
-                                <p class="user-roal">Administrator</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="bold active"><a href="index.html" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i>Dashboard</a></li>
-                      <li class="bold"><a class="waves-effect waves-cyan"><i class="mdi-action-invert-colors"></i>My Cuban Si Cars</a>
-                    <li class="bold"><a ui-sref="mailbox" class="waves-effect waves-cyan"><i class="mdi-communication-email"></i>Mailbox<span class="new badge">4</span></a></li>
-                    <li class="bold"><a ui-sref="profile" class="waves-effect waves-cyan"><i class="mdi-editor-insert-invitation"></i>Profile</a>
-                    <li class="bold"><a ui-sref="calender" class="waves-effect waves-cyan"><i class="mdi-editor-insert-invitation"></i>Calender</a>
-  </li>
-                    </li>
-                  </li>
-                </ul>
-              </aside>
-            </div>-->
-            <!-- START MAIN -->
             <div id="main">
               <!-- START WRAPPER -->
               <div class="wrapper">
@@ -82,7 +10,7 @@
                       <li class="user-details cyan darken-2">
                       <div class="row">
                           <div class="col col s4 m4 l4">
-                              <img src="images/avatar.jpg" alt="" class="circle responsive-img valign profile-image">
+                              <img ng-src="{{$ctrl.owner.avatar}}" alt="" class="circle responsive-img valign profile-image">
                           </div>
                           <div class="col col s8 m8 l8">
                               <ul id="profile-dropdown" class="dropdown-content">
@@ -98,7 +26,7 @@
                                   <li><a href="#"><i class="mdi-hardware-keyboard-tab"></i> Logout</a>
                                   </li>
                               </ul>
-                              <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">John Doe<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                              <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown"> {{$ctrl.owner.firstname}}<i class="mdi-navigation-arrow-drop-down right"></i></a>
                               <p class="user-roal">Administrator</p>
                           </div>
                       </div>
@@ -119,13 +47,13 @@
                               </li>
                           </ul>
                       </li>
-                      <li class="bold"><a href="app-email.html" class="waves-effect waves-cyan"><i class="mdi-communication-email"></i> Mailbox <span class="new badge">4</span></a>
+                      <li class="bold"><a ui-sref="mailbox" class="waves-effect waves-cyan"><i class="mdi-communication-email"></i> Mailbox <span class="new badge">4</span></a>
                       </li>
-                      <li class="bold"><a href="app-calendar.html" class="waves-effect waves-cyan"><i class="mdi-editor-insert-invitation"></i> Calender</a>
+                      <li class="bold"><a ui-sref="calender" class="waves-effect waves-cyan"><i class="mdi-editor-insert-invitation"></i> Calender</a>
                       </li>
                       <li class="no-padding">
                           <ul class="collapsible collapsible-accordion">
-                              <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-invert-colors"></i> CSS</a>
+                              <li class="bold"><a ui-sref="profile" class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-invert-colors"></i> Profile</a>
                                   <div class="collapsible-body">
                                       <ul>
                                           <li><a href="css-typography.html">Typography</a>
@@ -143,7 +71,8 @@
                                       </ul>
                                   </div>
                               </li>
-                              <li class="bold"><a class="collapsible-header  waves-effect waves-cyan active"><i class="mdi-image-palette"></i> UI Elements</a>
+                              <li class="bold"><a ui-sref="cars.item({id:cars._id})" class="collapsible-header  waves-effect waves-cyan active"><i class="mdi-image-palette"></i>My Cuban Taxi
+                              </a>
                                   <div class="collapsible-body">
                                       <ul>
                                           <li><a href="ui-alerts.html">Alerts</a>
@@ -175,7 +104,7 @@
                                       </ul>
                                   </div>
                               </li>
-                              <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-av-queue"></i> Advanced UI <span class="new badge"></span></a>
+                              <li class="bold"><a ui-sref="cars.new" class="collapsible-header waves-effect waves-cyan"><i class="mdi-av-queue"></i> Add A Taxi<span class="new badge"></span></a>
                                   <div class="collapsible-body">
                                       <ul>
                                           <li><a href="advanced-ui-chips.html">Chips</a>
