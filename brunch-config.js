@@ -16,7 +16,7 @@ exports.config = {
             },
             order: {
                 before: [
-              'node_modules/jquery/dist/*.js',
+               'node_modules/jquery/dist/*.js',
                'node_modules/angular/*.js',
                'node_modules/materialize-v3.1/demo/js/plugins/**/*.js',
                'public/materialize-plugins/*.js',
@@ -31,12 +31,13 @@ exports.config = {
             joinTo: {
                 'css/vendor.min.css': [],
                 'css/app.min.css': /^public\/scss/
+
               }
         }
     },
     npm: {
         enabled: true,
-        compilers: ['angular', 'angular-ui-router', 'angular-cookies', 'angular-materialize', 'jquery', 'Material-Design-Icons']
+        compilers: ['angular', 'angular-ui-router', 'angular-cookies', 'angular-materialize', 'jquery', 'Material-Design-Icons','cloudinary-fileupload', 'blueimp-fileupload', 'blueimp-load-image', 'blueimp-template']
     },
     conventions: {
         assets: /static[\\/]/,
