@@ -16,14 +16,14 @@ exports.config = {
             },
             order: {
                 before: [
-                'node_modules/jquery/dist/*.js',
-                'node_modules/angular/*.js',
-                'node_modules/materialize-v3.1/demo/js/plugins/**/*.js',
-                'public/materialize-plugins/*.js',
-                'public/materialize-plugins/**/*.min.js',
-                'public/js/app.js',
-                'public/js/**/*.md.js',
-                'public/js/components/**/*.js'
+              'node_modules/jquery/dist/*.js',
+               'node_modules/angular/*.js',
+               'node_modules/materialize-v3.1/demo/js/plugins/**/*.js',
+               'public/materialize-plugins/*.js',
+               'public/materialize-plugins/**/*.min.js',
+               'public/js/app.js',
+               'public/js/**/*.md.js',
+               'public/js/components/**/*.js'
                     ]
             }
         },
@@ -31,8 +31,7 @@ exports.config = {
             joinTo: {
                 'css/vendor.min.css': [],
                 'css/app.min.css': /^public\/scss/
-
-            }
+              }
         }
     },
     npm: {
