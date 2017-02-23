@@ -1,7 +1,8 @@
 ((app) => {
   'use strict'
 
-  const file = [() => {
+
+ const file = [() => {
         return {
             restrict: 'E',
             template: '<input type ="file">',
@@ -25,16 +26,13 @@
         }
     }]
 
-    app.directive('fichier', file)
+/*    app.directive('fichier', file)*/
 })(require('angular').module('app', [
   require('angular-ui-router'),
   require('angular-cookies'),
   require('angular-materialize'),
-  require('cloudinary-fileupload'),
-  require('blueimp-fileupload'),
-  require('blueimp-load-image'),
-  require('blueimp-template'),
-    'app.config',
+  require('ng-file-upload'),
+  'app.config',
   'app.services',
   'app.cars',
   'app.common',

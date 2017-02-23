@@ -11,14 +11,18 @@ exports.config = {
 
                   'js/vendor.min.js': /^node_modules/,
                   'js/plugins.min.js': /^node_modules\/materialize-v3.1\/demo\/js\/plugins/,
+                  'js/upload.min.js': /^node_modules\/ng-file-upload\/dist/,
                   'js/app.min.js': /^public\/js/,
                   'js/mplugins.min.js': /^public\/materialize-plugins/,
+
             },
             order: {
                 before: [
                'node_modules/jquery/dist/*.js',
                'node_modules/angular/*.js',
                'node_modules/materialize-v3.1/demo/js/plugins/**/*.js',
+               'node_modules/ng-file-upload/dist/**/*.js',
+               'node_modules/ng-file-upload/dist/**/*.min.js',
                'public/materialize-plugins/*.js',
                'public/materialize-plugins/**/*.min.js',
                'public/js/app.js',
@@ -37,7 +41,7 @@ exports.config = {
     },
     npm: {
         enabled: true,
-        compilers: ['angular', 'angular-ui-router', 'angular-cookies', 'angular-materialize', 'jquery', 'Material-Design-Icons','cloudinary-fileupload', 'blueimp-fileupload', 'blueimp-load-image', 'blueimp-template']
+        compilers: ['angular', 'angular-ui-router', 'angular-cookies', 'angular-materialize', 'jquery', 'Material-Design-Icons','ng-file-upload']
     },
     conventions: {
         assets: /static[\\/]/,

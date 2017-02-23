@@ -13,10 +13,10 @@ module.exports = mongoose.model('Owner', new mongoose.Schema({
         type: String
     },
     age: {
-        type: String
+        type: Number
     },
-    sold: {
-        type: String
+    clients: {
+        type: Number
     },
     email: {
         type: String,
