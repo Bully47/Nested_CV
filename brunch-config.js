@@ -48,9 +48,6 @@ exports.config = {
                      'node_modules/materialize-v3.1/getting_started/sass/style.scss',
                      'node_modules/materialize-v3.1/getting_started/sass/materialize.scss',
                      'public/scss/**/*.scss'
-
-
-
                     ]
               },
     },
