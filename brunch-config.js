@@ -34,10 +34,25 @@ exports.config = {
         stylesheets: {
             joinTo: {
                 'css/vendor.min.css': [],
-                'css/app.min.css': /^public\/scss/
-
+                'css/app.min.css': /^node_modules\/scss/,
+                'css/scss.min.css': /^public\/scss/
               }
-        }
+        },
+        order: {
+            before: [
+                     'node_modules/materialize-v3.1/getting_started/sass/components/**/*.scss',
+                     'node_modules/materialize-v3.1/getting_started/sass/theme-components/layouts/**/*.scss',
+                     'node_modules/materialize-v3.1/getting_started/sass/theme-components/pages/**/*.scss',
+                     'node_modules/materialize-v3.1/getting_started/sass/theme-components/pages/**/*.scss',
+                     'node_modules/materialize-v3.1/getting_started/sass/themes/default/**/*.scss',
+                     'node_modules/materialize-v3.1/getting_started/sass/style.scss',
+                     'node_modules/materialize-v3.1/getting_started/sass/materialize.scss',
+                     'public/scss/**/*.scss'
+
+
+
+                    ]
+              },
     },
     npm: {
         enabled: true,
