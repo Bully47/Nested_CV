@@ -10,17 +10,19 @@ exports.config = {
             joinTo: {
 
                   'js/vendor.min.js': /^node_modules/,
-                  'js/plugins.min.js': /^node_modules\/materialize-v3.1\/demo\/js\/plugins/,
-                  'js/upload.min.js': /^node_modules\/ng-file-upload\/dist/,
                   'js/app.min.js': /^public\/js/,
-                  'js/mplugins.min.js': /^public\/materialize-plugins/,
+                  'js/mplugins.min.js': /^public\/dist\/js\/materialize-plugins/,
+                  'js/plugins.min.js': /^public\/dist\/js\/plugins/,
+                  'js/upload.min.js': /^node_modules\/ng-file-upload\/dist/,
+
+
 
             },
             order: {
                 before: [
                'node_modules/jquery/dist/*.js',
                'node_modules/angular/*.js',
-               'node_modules/materialize-v3.1/demo/js/plugins/**/*.js',
+               'public/dist/js/plugins/**/*.js',
                'node_modules/ng-file-upload/dist/**/*.js',
                'node_modules/ng-file-upload/dist/**/*.min.js',
                'public/materialize-plugins/*.js',
@@ -34,8 +36,11 @@ exports.config = {
         stylesheets: {
             joinTo: {
                 'css/vendor.min.css': [],
-                'css/app.min.css': /^node_modules\/scss/,
+                'css/app.min.css': /^node_modules\/materialize-v3.1\/getting_started\/sass/,
+                'css/css.min.css': /^public\/dist\/css/,
                 'css/scss.min.css': /^public\/scss/
+
+
               }
         },
         order: {
@@ -47,7 +52,8 @@ exports.config = {
                      'node_modules/materialize-v3.1/getting_started/sass/themes/default/**/*.scss',
                      'node_modules/materialize-v3.1/getting_started/sass/style.scss',
                      'node_modules/materialize-v3.1/getting_started/sass/materialize.scss',
-                     'public/scss/**/*.scss'
+                     'public/scss/**/*.scss',
+
                     ]
               },
     },
